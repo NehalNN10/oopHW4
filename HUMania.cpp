@@ -9,8 +9,6 @@ using namespace std;
 
 void HUMania::drawObjects()
 {
-    // call draw functions of all the objects here
-    // p1.draw();
     for (auto it = lst.begin(); it != lst.end();)
     {
         if (strcmp(typeid(**it).name(), "3Bee") == 0 && (*it)->isOver() == true)
@@ -25,6 +23,7 @@ void HUMania::drawObjects()
         {
             (*it)->draw();
             (*it)->fly();
+            (*it)->animate();
             it++;
         }
     }
@@ -35,7 +34,7 @@ void HUMania::createObject(int x, int y)
 {
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
 
-    lst.push_back(o.getObject(x, y));
+    lst.push_back(ObjectCreator::getObject(x, y));
 }
 
 HUMania::~HUMania()

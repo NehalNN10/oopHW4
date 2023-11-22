@@ -6,8 +6,6 @@
 
 class ObjectCreator
 {
-
     public:
-        Unit* getObject(int , int );
-
+        static Unit* getObject(int , int );
 };

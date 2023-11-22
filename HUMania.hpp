@@ -9,16 +9,11 @@ using namespace std;
 
 class HUMania{
 
-    //Right now we're creating one pigeon, just for practice. for details follow the guidlines 
-    Pigeon p1;
-    ObjectCreator o;
-
-    //Create your list here
-    public:
+    private:
         list<Unit*> lst;
+
+    public:
         void drawObjects(); 
         void createObject(int x, int y);
-    
-    // create destructor which deletes all dynamic objects
         ~HUMania();
 };

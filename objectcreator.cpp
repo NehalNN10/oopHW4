@@ -5,32 +5,22 @@
 
 Unit* ObjectCreator::getObject(int x_coord, int y_coord)
 {
-    // Unit* u = nullptr;
-    Pigeon* p = nullptr;
-    Butterfly* bu = nullptr;
-    Bee* b = nullptr;
+    Unit* u = nullptr;
 
     int r = rand()%3;
-    SDL_Rect mr = {x_coord, y_coord, 50, 50}; //50x50 object at (x_coord, y_coord)
+    SDL_Rect mr = {x_coord, y_coord, 50, 50};
 
     switch(r)
     {
         case 0:
-            p = new Pigeon(mr);
-            return p;
-            // u = p;
-            // break;
+            u = new Pigeon(mr);
+            break;
         case 1:
-            b = new Bee(mr);
-            return b;
-            // u = b;
-            // break;
+            u = new Bee(mr);
+            break;
         case 2:
-            bu = new Butterfly(mr);
-            return bu;
-            // u = bu;
-            // break;
+            u = new Butterfly(mr);
+            break;
     }
-    
-    // return u;
+    return u;
 }
