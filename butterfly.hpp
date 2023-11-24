@@ -1,6 +1,5 @@
 #pragma once
 #include <SDL.h>
-#include "drawing.hpp"
 #include "Unit.hpp"
 
 class Butterfly : public Unit
@@ -11,5 +10,5 @@ class Butterfly : public Unit
 
     public:
         Butterfly(SDL_Rect mr);
-        void fly();
+        void fly() override;
 };

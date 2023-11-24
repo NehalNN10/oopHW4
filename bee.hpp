@@ -1,5 +1,4 @@
 #pragma once
-#include "drawing.hpp"
 #include "Unit.hpp"
 
 class Bee : public Unit
@@ -10,6 +9,6 @@ class Bee : public Unit
 
     public:
         Bee(SDL_Rect mr);
-        void fly();
+        void fly() override;
         bool isOver();
 };

@@ -1,5 +1,4 @@
 #include "butterfly.hpp"
-#include <iostream>
 
 Butterfly::Butterfly(SDL_Rect mr)
 {   
